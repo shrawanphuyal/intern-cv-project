@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190115 08:25:38.111" generator="Robot 3.1 (Python 2.7.12 on linux2)">
+<suite source="/home/shrawan/PycharmProjects/intern_apply/Testcases/completetest.robot" id="s1" name="Completetest">
+<test id="s1-t1" name="Browser opening">
+<kw name="Open Google Chrome" library="browseropen">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190115 08:25:38.254" level="INFO">Opening browser 'headless firefox' to base url 'http://careergeneseentranceexamweb.s3-website-us-east-1.amazonaws.com'.</msg>
+<status status="PASS" endtime="20190115 08:25:42.590" starttime="20190115 08:25:38.254"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190115 08:25:46.127" starttime="20190115 08:25:42.592"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[contains(text(),'examinee form')]</arg>
+</arguments>
+<msg timestamp="20190115 08:25:46.129" level="INFO">Clicking element '//a[contains(text(),'examinee form')]'.</msg>
+<status status="PASS" endtime="20190115 08:25:52.643" starttime="20190115 08:25:46.128"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Main Page</arg>
+</arguments>
+<msg timestamp="20190115 08:25:52.651" level="INFO">Page title is 'Main Page'.</msg>
+<status status="PASS" endtime="20190115 08:25:52.651" starttime="20190115 08:25:52.644"></status>
+</kw>
+<status status="PASS" endtime="20190115 08:25:52.652" starttime="20190115 08:25:38.253"></status>
+</kw>
+<tags>
+<tag>Signup form</tag>
+</tags>
+<status status="PASS" endtime="20190115 08:25:52.652" critical="yes" starttime="20190115 08:25:38.252"></status>
+</test>
+<test id="s1-t2" name="User Signup">
+<kw name="Form Fillup" library="signup_keywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[contains(text(),'Examinee form')]</arg>
+</arguments>
+<msg timestamp="20190115 08:25:52.655" level="INFO">Clicking element '//a[contains(text(),'Examinee form')]'.</msg>
+<status status="PASS" endtime="20190115 08:25:53.056" starttime="20190115 08:25:52.654"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='fname']</arg>
+<arg>${firstname}</arg>
+</arguments>
+<msg timestamp="20190115 08:25:53.059" level="INFO">Typing text 'shrawan' into text field '//input[@id='fname']'.</msg>
+<status status="PASS" endtime="20190115 08:25:53.109" starttime="20190115 08:25:53.057"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='lname']</arg>
+<arg>${lastname}</arg>
+</arguments>
+<msg timestamp="20190115 08:25:53.109" level="INFO">Typing text 'phuyal' into text field '//input[@id='lname']'.</msg>
+<status status="PASS" endtime="20190115 08:25:53.131" starttime="20190115 08:25:53.109"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='adrs']</arg>
+<arg>${address}</arg>
+</arguments>
+<msg timestamp="20190115 08:25:53.131" level="INFO">Typing text 'mulpani kathmandu' into text field '//input[@id='adrs']'.</msg>
+<status status="PASS" endtime="20190115 08:25:53.155" starttime="20190115 08:25:53.131"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='phn']</arg>
+<arg>${contact}</arg>
+</arguments>
+<msg timestamp="20190115 08:25:53.156" level="INFO">Typing text '9818414810' into text field '//input[@id='phn']'.</msg>
+<status status="PASS" endtime="20190115 08:25:53.174" starttime="20190115 08:25:53.155"></status>
+</kw>
+<kw name="Choose File" library="Selenium2Library">
+<doc>Inputs the ``file_path`` into file input field ``locator``.</doc>
+<arguments>
+<arg>//input[@id='inputFile']</arg>
+<arg>${cv}</arg>
+</arguments>
+<status status="PASS" endtime="20190115 08:25:53.185" starttime="20190115 08:25:53.174"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[@id='submit_form']</arg>
+</arguments>
+<msg timestamp="20190115 08:25:53.186" level="INFO">Clicking element '//button[@id='submit_form']'.</msg>
+<status status="PASS" endtime="20190115 08:25:53.413" starttime="20190115 08:25:53.186"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20190115 08:26:03.415" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20190115 08:26:03.415" starttime="20190115 08:25:53.414"></status>
+</kw>
+<kw name="Alert Should Be Present" library="Selenium2Library">
+<doc>Verifies that an alert is present and, by default, accepts it.</doc>
+<arguments>
+<arg>[object Object]</arg>
+</arguments>
+<status status="PASS" endtime="20190115 08:26:03.444" starttime="20190115 08:26:03.415"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20190115 08:26:13.445" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20190115 08:26:13.446" starttime="20190115 08:26:03.444"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Successful Signup</arg>
+</arguments>
+<status status="PASS" endtime="20190115 08:26:13.448" starttime="20190115 08:26:13.447"></status>
+</kw>
+<status status="PASS" endtime="20190115 08:26:13.449" starttime="20190115 08:25:52.654"></status>
+</kw>
+<status status="PASS" endtime="20190115 08:26:13.450" critical="yes" starttime="20190115 08:25:52.653"></status>
+</test>
+<test id="s1-t3" name="User Registration1">
+<kw name="New Registration" library="registration">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[contains(text(),'register admin')]</arg>
+</arguments>
+<msg timestamp="20190115 08:26:13.461" level="INFO">Clicking element '//a[contains(text(),'register admin')]'.</msg>
+<status status="PASS" endtime="20190115 08:26:14.912" starttime="20190115 08:26:13.459"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='emailInputRegister']</arg>
+<arg>${username1}</arg>
+</arguments>
+<msg timestamp="20190115 08:26:14.915" level="INFO">Typing text 'hello2200@pokemail.net' into text field '//input[@id='emailInputRegister']'.</msg>
+<status status="PASS" endtime="20190115 08:26:15.031" starttime="20190115 08:26:14.913"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='passwordInputRegister']</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190115 08:26:15.032" level="INFO">Typing text 'Phuyal@321' into text field '//input[@id='passwordInputRegister']'.</msg>
+<status status="PASS" endtime="20190115 08:26:15.066" starttime="20190115 08:26:15.032"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='password2InputRegister']</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190115 08:26:15.066" level="INFO">Typing text 'Phuyal@321' into text field '//input[@id='password2InputRegister']'.</msg>
+<status status="PASS" endtime="20190115 08:26:15.105" starttime="20190115 08:26:15.066"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@value='submit']</arg>
+</arguments>
+<msg timestamp="20190115 08:26:15.105" level="INFO">Clicking element '//input[@value='submit']'.</msg>
+<status status="PASS" endtime="20190115 08:26:15.349" starttime="20190115 08:26:15.105"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20190115 08:26:25.351" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20190115 08:26:25.352" starttime="20190115 08:26:15.350"></status>
+</kw>
+<kw name="Alert Should Not Be Present" library="Selenium2Library">
+<doc>Verifies that no alert is present.</doc>
+<arguments>
+<arg>UsernameExistsException: User already exists</arg>
+</arguments>
+<status status="PASS" endtime="20190115 08:26:25.865" starttime="20190115 08:26:25.353"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Successfull Registration</arg>
+</arguments>
+<status status="PASS" endtime="20190115 08:26:25.867" starttime="20190115 08:26:25.866"></status>
+</kw>
+<status status="PASS" endtime="20190115 08:26:25.868" starttime="20190115 08:26:13.457"></status>
+</kw>
+<status status="PASS" endtime="20190115 08:26:25.869" critical="yes" starttime="20190115 08:26:13.453"></status>
+</test>
+<test id="s1-t4" name="pokemail">
+<kw name="shrawan" library="pokemail">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.guerrillamail.com</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190115 08:26:25.877" level="INFO">Opening browser 'headless firefox' to base url 'https://www.guerrillamail.com'.</msg>
+<status status="PASS" endtime="20190115 08:26:33.101" starttime="20190115 08:26:25.875"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190115 08:26:36.614" starttime="20190115 08:26:33.102"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//span[@id='inbox-id']</arg>
+</arguments>
+<msg timestamp="20190115 08:26:36.616" level="INFO">Clicking element '//span[@id='inbox-id']'.</msg>
+<status status="PASS" endtime="20190115 08:26:36.934" starttime="20190115 08:26:36.614"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20190115 08:26:38.936" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190115 08:26:38.937" starttime="20190115 08:26:36.934"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//span[@id='inbox-id']//input[@type='text']</arg>
+<arg>${username1}</arg>
+</arguments>
+<msg timestamp="20190115 08:26:38.939" level="INFO">Typing text 'hello2200@pokemail.net' into text field '//span[@id='inbox-id']//input[@type='text']'.</msg>
+<status status="PASS" endtime="20190115 08:26:39.047" starttime="20190115 08:26:38.938"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20190115 08:26:41.049" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190115 08:26:41.050" starttime="20190115 08:26:39.048"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[@class='save button small']</arg>
+</arguments>
+<msg timestamp="20190115 08:26:41.052" level="INFO">Clicking element '//button[@class='save button small']'.</msg>
+<status status="PASS" endtime="20190115 08:26:41.359" starttime="20190115 08:26:41.050"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>30s</arg>
+</arguments>
+<msg timestamp="20190115 08:27:11.361" level="INFO">Slept 30 seconds</msg>
+<status status="PASS" endtime="20190115 08:27:11.362" starttime="20190115 08:26:41.360"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>(//td[@class='td3']//span[contains(text(),'Your verification')])</arg>
+</arguments>
+<msg timestamp="20190115 08:27:11.364" level="INFO">Clicking element '(//td[@class='td3']//span[contains(text(),'Your verification')])'.</msg>
+<status status="PASS" endtime="20190115 08:27:11.620" starttime="20190115 08:27:11.363"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20190115 08:27:21.623" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20190115 08:27:21.624" starttime="20190115 08:27:11.621"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='email_body']</arg>
+</arguments>
+<status status="PASS" endtime="20190115 08:27:21.687" starttime="20190115 08:27:21.625"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20190115 08:27:31.689" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20190115 08:27:31.690" starttime="20190115 08:27:21.688"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='email_body']</arg>
+</arguments>
+<assign>
+<var>${number}</var>
+</assign>
+<msg timestamp="20190115 08:27:31.746" level="INFO">${number} = Your verification code is 603020.</msg>
+<status status="PASS" endtime="20190115 08:27:31.746" starttime="20190115 08:27:31.691"></status>
+</kw>
+<kw name="Get Substring" library="String">
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<arguments>
+<arg>${number}</arg>
+<arg>26</arg>
+<arg>32</arg>
+</arguments>
+<assign>
+<var>${substring}</var>
+</assign>
+<msg timestamp="20190115 08:27:31.746" level="INFO">${substring} = 603020</msg>
+<status status="PASS" endtime="20190115 08:27:31.747" starttime="20190115 08:27:31.746"></status>
+</kw>
+<kw name="Switch Browser" library="Selenium2Library">
+<doc>Switches between active browsers using ``index_or_alias``.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" endtime="20190115 08:27:31.747" starttime="20190115 08:27:31.747"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190115 08:27:36.748" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20190115 08:27:36.749" starttime="20190115 08:27:31.747"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='emailInputVerify']</arg>
+<arg>${username1}</arg>
+</arguments>
+<msg timestamp="20190115 08:27:36.751" level="INFO">Typing text 'hello2200@pokemail.net' into text field '//input[@id='emailInputVerify']'.</msg>
+<status status="PASS" endtime="20190115 08:27:36.851" starttime="20190115 08:27:36.750"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='codeInputVerify']</arg>
+<arg>${substring}</arg>
+</arguments>
+<msg timestamp="20190115 08:27:36.851" level="INFO">Typing text '603020' into text field '//input[@id='codeInputVerify']'.</msg>
+<status status="PASS" endtime="20190115 08:27:36.875" starttime="20190115 08:27:36.851"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@value='Verify']</arg>
+</arguments>
+<msg timestamp="20190115 08:27:36.875" level="INFO">Clicking element '//input[@value='Verify']'.</msg>
+<status status="PASS" endtime="20190115 08:27:37.110" starttime="20190115 08:27:36.875"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20190115 08:27:47.112" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20190115 08:27:47.113" starttime="20190115 08:27:37.111"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>successfull validate</arg>
+</arguments>
+<status status="PASS" endtime="20190115 08:27:47.115" starttime="20190115 08:27:47.114"></status>
+</kw>
+<status status="PASS" endtime="20190115 08:27:47.115" starttime="20190115 08:26:25.873"></status>
+</kw>
+<status status="PASS" endtime="20190115 08:27:47.116" critical="yes" starttime="20190115 08:26:25.871"></status>
+</test>
+<test id="s1-t5" name="Login user">
+<kw name="Login" library="loginkeyword">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190115 08:27:47.122" level="INFO">Opening browser 'headless firefox' to base url 'http://careergeneseentranceexamweb.s3-website-us-east-1.amazonaws.com'.</msg>
+<status status="PASS" endtime="20190115 08:27:55.077" starttime="20190115 08:27:47.121"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190115 08:27:58.590" starttime="20190115 08:27:55.077"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='emailInputSignin']</arg>
+<arg>${username1}</arg>
+</arguments>
+<msg timestamp="20190115 08:27:58.592" level="INFO">Typing text 'hello2200@pokemail.net' into text field '//input[@id='emailInputSignin']'.</msg>
+<status status="PASS" endtime="20190115 08:27:58.660" starttime="20190115 08:27:58.590"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='passwordInputSignin']</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190115 08:27:58.661" level="INFO">Typing text 'Phuyal@321' into text field '//input[@id='passwordInputSignin']'.</msg>
+<status status="PASS" endtime="20190115 08:27:58.691" starttime="20190115 08:27:58.661"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='login_btn']</arg>
+</arguments>
+<msg timestamp="20190115 08:27:58.691" level="INFO">Clicking element '//input[@id='login_btn']'.</msg>
+<status status="PASS" endtime="20190115 08:27:59.251" starttime="20190115 08:27:58.691"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Hi the admin page is under maintenance. please wait..</arg>
+</arguments>
+<status status="PASS" endtime="20190115 08:28:02.840" starttime="20190115 08:27:59.252"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Hi the admin page is under maintenance. please wait..</arg>
+</arguments>
+<msg timestamp="20190115 08:28:02.850" level="INFO">Current page contains text 'Hi the admin page is under maintenance. please wait..'.</msg>
+<status status="PASS" endtime="20190115 08:28:02.850" starttime="20190115 08:28:02.841"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Successful login</arg>
+</arguments>
+<status status="PASS" endtime="20190115 08:28:02.850" starttime="20190115 08:28:02.850"></status>
+</kw>
+<status status="PASS" endtime="20190115 08:28:02.850" starttime="20190115 08:27:47.120"></status>
+</kw>
+<status status="PASS" endtime="20190115 08:28:02.850" critical="yes" starttime="20190115 08:27:47.118"></status>
+</test>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20190115 08:28:04.167" starttime="20190115 08:28:02.851"></status>
+</kw>
+<status status="PASS" endtime="20190115 08:28:04.167" starttime="20190115 08:25:38.112"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="5">Critical Tests</stat>
+<stat fail="0" pass="5">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">Signup form</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Completetest" pass="5">Completetest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
